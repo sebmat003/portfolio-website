@@ -1,0 +1,70 @@
+.header {
+  height: 100vh;
+  color: #61836c;
+  font-size: 1rem;
+}
+
+.text-container {
+  position: relative;
+  text-align: right;
+  height: 100vh;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+p {
+  letter-spacing: 0.3rem;
+  line-height: 3rem;
+}
+
+.text {
+  visibility: visible;
+  width: 50%;
+  height: 50%;
+  transform: translateX(70%) translateY(50%);
+  display: table;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+#writing-text {
+  transform: translateX(-10vh) translateY(2vh);
+  font-size: 2rem;
+  font-family: AnkeHand, sans-serif;
+}
+
+#name {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.job {
+  color: #555;
+  line-height: .7rem;
+}
+
+.image-container {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vh;
+  position: relative;
+  text-align: left;
+}
+
+.image-container img {
+  max-width: 50%;
+  max-height: 50%;
+  border-radius: 50%;
+  border: .5vh solid #61836c;
+  background-color: #61836c;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto auto 0;
+}
