@@ -5,7 +5,7 @@
 }
 
 html {
-  background-color: #fff;
+  background-image: linear-gradient(to right,white,white, rgba(97,131,108,0.1) 90%);
   color: #61836c;
   font-family: 'Helvetica', sans-serif;
   font-weight: 300;

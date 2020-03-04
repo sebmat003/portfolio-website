@@ -1,7 +1,53 @@
 .header {
+  display: block;
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
   height: 100vh;
   color: #61836c;
   font-size: 1rem;
+}
+
+.background-nav {
+  background-color: #61836c;
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transform: translateX(-10%) skew(-45deg);
+}
+
+.navi {
+  z-index: 10;
+  background-image: linear-gradient(to right,white,white, rgba(97,131,108,0.1) 90%);
+}
+
+.navbar-brand {
+  margin-left: 20%;
+  margin-right: 5%;
+}
+
+.links {
+  transform: translateY(15%);
+}
+
+.links li a{
+  color: #c9e2cf;
+  text-decoration: none;
+  border-bottom: 3px solid #61836c;
+  margin: 0 .7rem;
+}
+
+.links li a:hover {
+  color: white;
+  border-bottom: 2px solid #91be9f;
+}
+
+.social-media {
+  transform: translateY(10%);
+  margin-left: 10%;
+  width: 20%;
 }
 
 .text-container {
@@ -33,6 +79,7 @@ p {
   transform: translateX(-10vh) translateY(2vh);
   font-size: 2rem;
   font-family: AnkeHand, sans-serif;
+  color: #8ebf9f;
 }
 
 #name {
