@@ -1,0 +1,144 @@
+.container {
+  position: relative;
+  transform: skew(45deg);
+  height: 100vh;
+  color: white;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.background {
+  margin-top: 80vh;
+  width: 100%;
+  height: 100vh;
+  background-color: #61836c;
+  transform: skew(-45deg) ;
+}
+
+.row {
+  height: 50%;
+}
+
+.row:first-child {
+  height: 45%;
+}
+
+.about {
+
+}
+
+.left-side {
+  text-align: right;
+  border-right: 1px solid white;
+  padding-bottom: 2rem;
+}
+
+.right-side {
+  text-align: left;
+}
+
+.right-side p {
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+.big-text {
+  font-size: 2rem;
+}
+
+table {
+  width: 100%;
+  border: none;
+}
+
+table tr {
+  padding: 1rem;
+}
+
+table td:first-child {
+  width: 40%;
+}
+
+table td:last-child {
+  width: 60%;
+}
+
+table td p {
+  margin-left: 10%;
+  margin-right: 5%;
+}
+table td p:first-child {
+  margin-top: 6%;
+}
+
+.skill-bar {
+  position: relative;
+  display: inline-block;
+  width: 75%;
+  height: 25%;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.skill-bar-fill{
+  width: 0;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #91be9f;
+  animation: 1s show-up linear;
+}
+
+.skill-bar-fill:after {
+  content: '.';
+  visibility: hidden;
+}
+
+.width-1 {
+  animation: 1s fill_20 ease-in-out;
+  width: 20%;
+}
+
+.width-2 {
+  animation: 1s fill_40 ease-in-out;
+  width: 40%;
+}
+
+.width-3 {
+  animation: 1s fill_60 ease-in-out;
+  width: 60%;
+}
+
+.width-4 {
+  animation: 1s fill_80 ease-in-out;
+  width: 80%;
+}
+
+.width-5 {
+  animation: 1s fill_100 ease-in-out;
+  width: 100%;
+}
+
+@keyframes fill_20 {
+  0% {width: 0}
+  100% {width: 20%}
+}
+
+@keyframes fill_40 {
+  0% {width: 0}
+  100% {width: 40%}
+}
+
+@keyframes fill_60 {
+  0% {width: 0}
+  100% {width: 60%}
+}
+
+@keyframes fill_80 {
+  0% {width: 0}
+  100% {width: 80%}
+}
+
+@keyframes fill_100 {
+  0% {width: 0}
+  100% {width: 100%}
+}

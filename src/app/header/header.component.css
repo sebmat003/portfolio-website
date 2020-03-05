@@ -1,5 +1,5 @@
 .header {
-  display: block;
+  display: inline-block;
   position: absolute;
   top: 0;
   left:0;
@@ -20,7 +20,7 @@
 
 .navi {
   z-index: 10;
-  background-image: linear-gradient(to right,white,white, rgba(97,131,108,0.1) 90%);
+  /*background-image: linear-gradient(to right,white,white, rgba(97,131,108,0.1) 90%);*/
 }
 
 .navbar-brand {
