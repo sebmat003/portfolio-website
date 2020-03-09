@@ -8,11 +8,10 @@
 }
 
 .background {
-  margin-top: 80vh;
   width: 100%;
   height: 100vh;
   background-color: #61836c;
-  transform: skew(-45deg) ;
+  transform: skew(-45deg) translateY(-5vh) ;
 }
 
 .row {
@@ -44,6 +43,7 @@
 
 .big-text {
   font-size: 2rem;
+  letter-spacing: 0.3rem;
 }
 
 table {

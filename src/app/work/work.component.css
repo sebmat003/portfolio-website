@@ -1,8 +1,41 @@
 .container {
-
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  /*background-color: green;*/
 }
 
 .background {
-  height: 100vh;
   width: 100%;
+  height: 100vh;
+  background: url("../../assets/images/background-work.png") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.coder, .designer {
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  width: 50%;
+  height: 75vh;
+  margin-top: 12.5vh;
+  transform: skew(10deg) translateX(-1%);
+  cursor: pointer;
+  background-color: orangered;
+  transition: opacity;
+  transition-duration: 0.5s;
+}
+
+.coder:hover, .designer:hover {
+  opacity: 1;
+}
+
+.gallery {
+  transform: skew(-10deg);
+  background-color: green;
 }

@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkComponent implements OnInit {
 
+  images = [
+    {
+      img: '../../../assests/images/mapy1.jpg', thumb: '../../../assests/images/mapy1.jpg', description: 'Mapy'
+    },
+    {
+      img: '../../../assests/images/mapy1.jpg', thumb: '../../../assests/images/mapy1.jpg', description: 'Mapy'
+    },
+  ];
+
+
   constructor() { }
 
   ngOnInit() {
