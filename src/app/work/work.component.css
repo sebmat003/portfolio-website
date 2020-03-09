@@ -18,17 +18,26 @@
 }
 
 .coder, .designer {
-  position: relative;
-  display: inline-block;
+  display: block;
   opacity: 0;
   width: 50%;
   height: 75vh;
   margin-top: 12.5vh;
-  transform: skew(10deg) translateX(-1%);
   cursor: pointer;
-  background-color: orangered;
   transition: opacity;
   transition-duration: 0.5s;
+  /*overflow: hidden;*/
+  background-color: white;
+  text-align: center;
+
+}
+
+.coder {
+  transform: skew(10deg) translateX(-1%)
+}
+
+.designer {
+  transform: skew(10deg) translateX(-0.3%);
 }
 
 .coder:hover, .designer:hover {
@@ -36,6 +45,14 @@
 }
 
 .gallery {
-  transform: skew(-10deg);
-  background-color: green;
+  transform: skew(-10deg) translateY(-50%) translateX(10%);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: skew(-10deg) translateY(-50%) translateX(10%);
 }
+
+ngx-gallery /deep/ .ngx-gallery-arrow {
+  color: #e3e3e3;
+}
+
