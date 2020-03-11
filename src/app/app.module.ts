@@ -7,6 +7,9 @@ import { WorkComponent } from './work/work.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import {NgxPageScrollModule} from 'ngx-page-scroll';
+import {NgxPageScrollCoreModule} from 'ngx-page-scroll-core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,9 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
   ],
   imports: [
     BrowserModule,
-    NgxGalleryModule
+    NgxGalleryModule,
+    NgxPageScrollModule,
+    NgxPageScrollCoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

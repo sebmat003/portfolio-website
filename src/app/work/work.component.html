@@ -1,21 +1,59 @@
-<div class="background aos-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center">
-  <div class="container">
-    <div class="row">
-      <div class="coder">
-        <div class="gallery">
-          <div class="d-flex flex-row justify-content-center align-items-center">
-            <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+<ng-container *ngIf="this.innerWidth >= 1000">
+  <div class="background aos-item" id="work" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center">
+    <div class="container">
+      <div class="row">
+        <div class="coder">
+          <div class="gallery">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+              <div class="link" style="text-align: right;">
+                <a href="https://github.com/sebmat003/mapy-utp" target="_blank">
+                  Link: <img src="../../assets/images/github_black.svg" width="25"  alt="github"></a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="designer">
-        <div class="gallery">
-          <div class="d-flex flex-row justify-content-center align-items-center">
-            <ngx-gallery [options]="galleryOptions" [images]="galleryDesign" class="ngx-gallery"></ngx-gallery>
+        <div class="designer">
+          <div class="gallery">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <ngx-gallery [options]="galleryOptions" [images]="galleryDesign" class="ngx-gallery"></ngx-gallery>
+              <div class="link" style="text-align: left;">
+                <a href="https://www.artstation.com/sebd96" target="_blank">
+                  Link: <img src="../../assets/images/art_station_black.svg" width="25" alt="art_station"></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</ng-container>
 
+<ng-container *ngIf="this.innerWidth < 1000">
+  <div class="container" id="work-mobile" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center">
+    <div class="row">
+      <div class="coder">
+        <div class="gallery">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+            <div class="link" style="text-align: right;">
+              <a href="https://github.com/sebmat003/mapy-utp" target="_blank">
+                Link: <img src="../../assets/images/github_black.svg" width="25"  alt="github"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="designer">
+        <div class="gallery">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <ngx-gallery [options]="galleryOptions" [images]="galleryDesign" class="ngx-gallery"></ngx-gallery>
+            <div class="link" style="text-align: left;">
+              <a href="https://www.artstation.com/sebd96" target="_blank">
+                Link: <img src="../../assets/images/art_station_black.svg" width="25" alt="art_station"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

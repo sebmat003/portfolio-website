@@ -1,93 +1,59 @@
-.header {
+header .navi {
   display: inline-block;
   position: relative;
   width: 100%;
-  height: 100vh;
-  color: #61836c;
-  font-size: 1rem;
 }
 
-.background-nav {
+header .navi::before {
+  content: "";
+  top:0;
+  left: 0;
+  position: absolute;
   background-color: #61836c;
   width: 75%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
   transform: translateX(-10%) skew(-45deg);
 }
 
-.navi {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-.navbar-brand {
+header .navbar-brand {
   position: relative;
   display: inline-block;
-  margin: 1% 5% -5% 20%;
+  margin: 1% 5% -5% 27.5%;
 }
 
-.links {
+header .links {
   position: relative;
   display: inline-block;
   transform: translateY(15%);
 }
 
-.links li {
+header .links li {
   display: inline-block;
 }
 
-.links li a{
+header .links li a{
   color: #c9e2cf;
   text-decoration: none;
   border-bottom: 3px solid #61836c;
   margin: 0 .7rem;
 }
 
-.links li a:hover {
+header .links li a:hover {
   color: white;
   border-bottom: 2px solid #91be9f;
-}
-
-.social-media {
-  position: relative;
-  display: inline-block;
-  transform: translateY(10%);
-  margin-left: 7%;
-  width: 20%;
-}
-
-.text-container {
-  position: relative;
-  text-align: right;
-  height: 100vh;
-  overflow: hidden;
-  visibility: hidden;
 }
 
 p {
   letter-spacing: 0.3rem;
   line-height: 3rem;
+  text-align: right;
 }
 
-.text {
-  visibility: visible;
-  width: 50%;
-  height: 50%;
-  transform: translateX(70%) translateY(50%);
-  display: table;
+.home {
+  color: #61836c;
+  font-size: 1rem;
 }
 
-.middle {
-  display: table-cell;
-  vertical-align: middle;
-}
 #writing-text {
   transform: translateX(-10vh) translateY(2vh);
   font-size: 2rem;
@@ -107,11 +73,12 @@ p {
 
 .image-container {
   overflow: hidden;
-  height: 100vh;
-  width: 100vh;
   position: relative;
   text-align: left;
   display: inline-block;
+  width: 100%;
+  height: auto;
+  margin: 7% 0;
 }
 
 .image-container img {
@@ -120,12 +87,43 @@ p {
   border-radius: 50%;
   border: .5vh solid #61836c;
   background-color: #61836c;
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto auto auto 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .navi {
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    background-color: #61836c;
+  }
+
+  .navbar-brand img {
+    width: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .image-container {
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .image-container img {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .text-container {
+    width: 100%;
+    justify-content: center;
+  }
 }

@@ -1,10 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
+*, ::after, ::before {
   box-sizing: border-box;
 }
 
-html {
+html, body {
   /*background-image: linear-gradient(to right,white,white, rgba(97,131,108,0.1) 90%);*/
   color: #61836c;
   font-family: 'Helvetica', sans-serif;
@@ -13,6 +11,7 @@ html {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
   line-height: 1.5;
+  margin: 0 auto;
 }
 
 @font-face {
@@ -21,7 +20,19 @@ html {
 }
 
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 299px) {
+  html{
+    font-size: 6px;
+  }
+}
+
+@media only screen and (min-width: 300px) {
+  html{
+    font-size: 7px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
   html{
     font-size: 8px;
   }

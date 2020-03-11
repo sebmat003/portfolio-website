@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
 
 @Component({
@@ -11,9 +11,15 @@ export class WorkComponent implements OnInit {
   galleryImages;
   galleryDesign;
   galleryOptions;
-  galleryOptionsTwo;
+  innerWidth;
 
   constructor() {
+    this.innerWidth = window.innerWidth;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = event.target.innerWidth;
   }
 
   ngOnInit() {
@@ -25,17 +31,19 @@ export class WorkComponent implements OnInit {
         imageAnimation: NgxGalleryAnimation.Fade,
         preview: false,
         thumbnailsArrows: true,
-        imageArrows: true
+        imageArrows: true,
+        imagePercent: 100,
       },
       // max-width 800
       {
         breakpoint: 800,
-        width: '100%',
-        height: '600px',
+        width: '100px',
+        height: '100px',
         imagePercent: 80,
-        thumbnailsPercent: 20,
-        thumbnailsMargin: 20,
-        thumbnailMargin: 20
+        thumbnailsColumns: 3,
+        // thumbnailsPercent: 100,
+        // thumbnailsMargin: 40,
+        // thumbnailMargin: 40
       },
       // max-width 400
       {
@@ -46,19 +54,29 @@ export class WorkComponent implements OnInit {
 
     this.galleryImages = [
       {
-        small: 'assets/images/mapy1.PNG',
-        medium: 'assets/images/mapy1.PNG',
-        big: 'assets/images/mapy1.PNG'
+        small: 'assets/images/mapy1.jpg',
+        medium: 'assets/images/mapy1.jpg',
+        big: 'assets/images/mapy1.jpg'
       },
       {
-        small: 'assets/images/mapy2.PNG',
-        medium: 'assets/images/mapy2.PNG',
-        big: 'assets/images/mapy2.PNG'
+        small: 'assets/images/mapy2.jpg',
+        medium: 'assets/images/mapy2.jpg',
+        big: 'assets/images/mapy2.jpg'
       },
       {
-        small: 'assets/images/mapy3.PNG',
-        medium: 'assets/images/mapy3.PNG',
-        big: 'assets/images/mapy3.PNG'
+        small: 'assets/images/mapy3.jpg',
+        medium: 'assets/images/mapy3.jpg',
+        big: 'assets/images/mapy3.jpg'
+      },
+      {
+        small: 'assets/images/mapy4.PNG',
+        medium: 'assets/images/mapy4.PNG',
+        big: 'assets/images/mapy4.PNG'
+      },
+      {
+        small: 'assets/images/mapy5.PNG',
+        medium: 'assets/images/mapy5.PNG',
+        big: 'assets/images/map5.PNG'
       }
     ];
 
@@ -87,6 +105,11 @@ export class WorkComponent implements OnInit {
         small: 'assets/images/logos.jpg',
         medium: 'assets/images/logos.jpg',
         big: 'assets/images/logos.jpg'
+      },
+      {
+        small: 'assets/images/snowman.jpg',
+        medium: 'assets/images/snowman.jpg',
+        big: 'assets/images/snowman.jpg'
       }
     ];
 
