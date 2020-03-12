@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     let doc = document.documentElement.scrollTop;
-    if (doc > 400 && doc < 1600 ) {
+    if (doc > 300 && doc < 1400 ) {
       document.getElementById('angular').classList.add('width-2');
       document.getElementById('html').classList.add('width-3');
       document.getElementById('css').classList.add('width-3');

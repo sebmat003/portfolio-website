@@ -25,8 +25,8 @@ export class WorkComponent implements OnInit {
   ngOnInit() {
     this.galleryOptions = [
       {
-        width: '400px',
-        height: '400px',
+        width: '500px',
+        height: '500px',
         thumbnailsColumns: 3,
         imageAnimation: NgxGalleryAnimation.Fade,
         preview: false,
@@ -34,21 +34,20 @@ export class WorkComponent implements OnInit {
         imageArrows: true,
         imagePercent: 100,
       },
-      // max-width 800
       {
-        breakpoint: 800,
-        width: '100px',
-        height: '100px',
-        imagePercent: 80,
-        thumbnailsColumns: 3,
-        // thumbnailsPercent: 100,
-        // thumbnailsMargin: 40,
-        // thumbnailMargin: 40
+        breakpoint: 1200,
+        width: '400px',
+        height: '400px',
       },
-      // max-width 400
       {
-        breakpoint: 400,
-
+        breakpoint: 900,
+        width: '300px',
+        height: '300px',
+      },
+      {
+        breakpoint: 500,
+        width: '250px',
+        height: '250px',
       }
     ];
 

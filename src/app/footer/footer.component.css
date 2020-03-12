@@ -22,3 +22,9 @@
 p{
   padding-top: 1%;
 }
+
+@media only screen and (max-width: 1000px) {
+  .social-media li {
+    padding: 0 2%;
+  }
+}
