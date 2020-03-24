@@ -6,9 +6,10 @@ import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/work.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
-import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import {NgxPageScrollModule} from 'ngx-page-scroll';
 import {NgxPageScrollCoreModule} from 'ngx-page-scroll-core';
+import { GalleryModule } from '@ngx-gallery/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,9 +22,10 @@ import {NgxPageScrollCoreModule} from 'ngx-page-scroll-core';
   ],
   imports: [
     BrowserModule,
-    NgxGalleryModule,
     NgxPageScrollModule,
-    NgxPageScrollCoreModule
+    NgxPageScrollCoreModule,
+    GalleryModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

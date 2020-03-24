@@ -1,5 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
+import {GalleryItem, ImageItem} from '@ngx-gallery/core';
 
 @Component({
   selector: 'app-work',
@@ -8,10 +8,10 @@ import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
 })
 export class WorkComponent implements OnInit {
 
-  galleryImages;
   galleryDesign;
-  galleryOptions;
   innerWidth;
+
+  images: GalleryItem[];
 
   constructor() {
     this.innerWidth = window.innerWidth;
@@ -23,60 +23,12 @@ export class WorkComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.galleryOptions = [
-      {
-        width: '500px',
-        height: '500px',
-        thumbnailsColumns: 3,
-        imageAnimation: NgxGalleryAnimation.Fade,
-        preview: false,
-        thumbnailsArrows: true,
-        imageArrows: true,
-        imagePercent: 100,
-      },
-      {
-        breakpoint: 1200,
-        width: '400px',
-        height: '400px',
-      },
-      {
-        breakpoint: 900,
-        width: '300px',
-        height: '300px',
-      },
-      {
-        breakpoint: 500,
-        width: '250px',
-        height: '250px',
-      }
-    ];
-
-    this.galleryImages = [
-      {
-        small: 'assets/images/mapy1.jpg',
-        medium: 'assets/images/mapy1.jpg',
-        big: 'assets/images/mapy1.jpg'
-      },
-      {
-        small: 'assets/images/mapy2.jpg',
-        medium: 'assets/images/mapy2.jpg',
-        big: 'assets/images/mapy2.jpg'
-      },
-      {
-        small: 'assets/images/mapy3.jpg',
-        medium: 'assets/images/mapy3.jpg',
-        big: 'assets/images/mapy3.jpg'
-      },
-      {
-        small: 'assets/images/mapy4.PNG',
-        medium: 'assets/images/mapy4.PNG',
-        big: 'assets/images/mapy4.PNG'
-      },
-      {
-        small: 'assets/images/mapy5.PNG',
-        medium: 'assets/images/mapy5.PNG',
-        big: 'assets/images/map5.PNG'
-      }
+    this.images = [
+      new ImageItem({src: 'assets/images/mapy1.jpg', thumb: 'assets/images/mapy1.jpg'}),
+      new ImageItem({src: 'assets/images/mapy2.jpg', thumb: 'assets/images/mapy2.jpg'}),
+      new ImageItem({src: 'assets/images/mapy3.jpg', thumb: 'assets/images/mapy3.jpg'}),
+      new ImageItem({src: 'assets/images/mapy4.jpg', thumb: 'assets/images/mapy4.jpg'}),
+      new ImageItem({src: 'assets/images/mapy5.jpg', thumb: 'assets/images/mapy5.jpg'}),
     ];
 
     this.galleryDesign = [

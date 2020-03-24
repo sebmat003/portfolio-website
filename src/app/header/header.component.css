@@ -89,17 +89,27 @@ p {
   background-color: #61836c;
 }
 
-@media only screen and (max-width: 500px) {
-  .navi {
+@media only screen and (max-width: 350px) {
+  header .navi {
+    content: "";
     top: 0;
     left: 0;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: auto;
-    text-align: left;
+    position: relative;
     background-color: #61836c;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  header .navi::before {
+    content: "";
+    top:0;
+    left: 0;
+    position: absolute;
+    background-color: #61836c;
+    width: 95%;
+    height: 100%;
+    transform: translateX(-10%) skew(-45deg);
   }
 
   .navbar-brand img {

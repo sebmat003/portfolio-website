@@ -4,7 +4,8 @@
     <div class="row">
       <div class="coder">
         <div class="gallery d-flex flex-column justify-content-center align-items-center">
-          <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+          <gallery [items]="images"></gallery>
+          <!--<ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>-->
           <div class="link" style="text-align: right;">
             <a href="https://github.com/sebmat003/mapy-utp" target="_blank">
               Link: <img src="../../assets/images/github_black.svg" width="25" alt="github"></a>
@@ -13,7 +14,7 @@
       </div>
       <div class="designer">
         <div class="gallery d-flex flex-column justify-content-center align-items-center">
-          <ngx-gallery [options]="galleryOptions" [images]="galleryDesign" class="ngx-gallery"></ngx-gallery>
+          <!--<ngx-gallery [options]="galleryOptions" [images]="galleryDesign" class="ngx-gallery"></ngx-gallery>-->
           <div class="link" style="text-align: left;">
             <a href="https://www.artstation.com/sebd96" target="_blank">
               Link: <img src="../../assets/images/art_station_black.svg" width="25" alt="art_station"></a>
@@ -27,35 +28,40 @@
 <ng-container *ngIf="this.innerWidth < 1000">
   <div class="container" id="work-mobile" data-aos="zoom-in" data-aos-duration="1000"
        data-aos-anchor-placement="top-center">
-    <div class="row">
-      <div class="col-12">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-          <div class="title-text">
-            <p>WORK AS CODER</p>
-            <div class="border"></div>
-          </div>
-          <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
-          <div class="link" style="text-align: right;">
-            <a href="https://github.com/sebmat003/mapy-utp" target="_blank">
-              <img src="../../assets/images/github_black.svg" width="25" alt="github"></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="title-text">
+              <p>MY WORK AS A CODER</p>
+              <div class="border"></div>
+            </div>
+            <!--<ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>-->
+            <div class="link" style="text-align: right;">
+              <a href="https://github.com/sebmat003/mapy-utp" target="_blank">
+                <img src="../../assets/images/github_black.svg" width="25" alt="github"></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row" style="margin-top: 10%;">
-      <div class="col-12">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-          <div class="title-text">
-            <p>WORK AS DESIGNER</p>
-            <div class="border"></div>
-          </div>
-          <ngx-gallery [options]="galleryOptions" [images]="galleryDesign" class="ngx-gallery"></ngx-gallery>
-          <div class="link" style="text-align: left;">
-            <a href="https://www.artstation.com/sebd96" target="_blank">
-              <img src="../../assets/images/art_station_black.svg" width="25" alt="art_station"></a>
+    <div class="container">
+      <div class="row" style="margin-top: 10%;">
+        <div class="col-12">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="title-text">
+              <p>MY WORK AS A DESIGNER</p>
+              <div class="border"></div>
+            </div>
+            <!--<ngx-gallery [options]="galleryOptions" [images]="galleryDesign" class="ngx-gallery"></ngx-gallery>-->
+            <div class="link" style="text-align: left;">
+              <a href="https://www.artstation.com/sebd96" target="_blank">
+                <img src="../../assets/images/art_station_black.svg" width="25" alt="art_station"></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </ng-container>

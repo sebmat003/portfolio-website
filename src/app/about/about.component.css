@@ -166,4 +166,8 @@ table td p:first-child {
     border-bottom: 10rem solid white;
     border-left: 10rem solid transparent;
   }
+
+  .big-text {
+    font-size: 1.4rem;
+  }
 }
